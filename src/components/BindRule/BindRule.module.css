@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: 'Tektur', sans-serif;
+    background-color: #2D2C33; /* Фон страницы */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .modal-box {
+    background-color: #2D2C33; /* Фон модального окна */
+    padding: 30px 40px;
+    border-radius: 12px;
+    max-width: 480px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    border: 2px solid #908E9E;
+  }
+  
+  .modal-title {
+    font-size: 22px;
+    color: #FFFFFF; /* Цвет заголовка */
+    margin-bottom: 25px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 6px;
+    color: #FFFFFF; /* Цвет текста */
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #908D9E;
+    border-radius: 6px;
+    font-family: 'Tektur', sans-serif;
+    background-color: #EEECEC;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center; /* Изменено на center */
+    gap: 10px;
+    margin-top: 25px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    font-family: 'Tektur', sans-serif;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .submit {
+    background-color: #5F73B3;
+    color: #FFFFFF;
+  }

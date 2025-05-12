@@ -1,0 +1,82 @@
+import React, { useState, useEffect } from 'react';
+import styles from './MarketplaceAdder.module.css';
+
+export interface MarketplaceData {
+    id: string;
+    name: string;
+    description?: string;
+}
+
+export interface MarketplaceAdderProps {
+    isOpen: boolean;
+    onClose: () => void;
+    onSave: (data: MarketplaceData) => void;
+    onBindRule?: (id: string) => void;
+}
+
+export function MarketplaceAdder({ isOpen, onClose, onSave, onBindRule }: MarketplaceAdderProps) {
+    const [id, setId] = useState('');
+    const [name, setName] = useState('');
+    const [description, setDescription] = useState('');
+
+    useEffect(() => {
+        if (isOpen) {
+            setId(crypto.randomUUID());
+            setName('');
+            setDescription('');
+        }
+    }, [isOpen]);
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!name.trim()) return;
+        onSave({ id, name: name.trim(), description: description.trim() || undefined });
+        onClose();
+    };
+
+    if (!isOpen) return null;
+
+    return (
+        <div className={styles.modal}>
+            <div className={styles.modalBox}>
+                <h2 className={styles.modalTitle}>Маркетплейс {id}</h2>
+                <button className={styles.close} onClick={onClose}>X</button>
+                <form onSubmit={handleSubmit}>
+                    <div className={styles.formGroup}>
+                        <label htmlFor="name">Name</label>
+                        <input
+                            className={styles.input}
+                            type="text"
+                            id="name"
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                            placeholder="Введите название"
+                            required
+                        />
+                    </div>
+                    <div className={styles.formGroup}>
+                        <label htmlFor="description">Description</label>
+                        <input
+                            className={styles.input}
+                            type="text"
+                            id="description"
+                            value={description}
+                            onChange={e => setDescription(e.target.value)}
+                            placeholder="Введите описание"
+                        />
+                    </div>
+                    <div className={styles.buttonGroup}>
+                        <button type="submit" className={styles.submit}>Сохранить</button>
+                        <button
+                            type="button"
+                            className={styles.bindRule}
+                            onClick={() => onBindRule?.(id)}
+                        >
+                            Привязать правило
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    );
+}
