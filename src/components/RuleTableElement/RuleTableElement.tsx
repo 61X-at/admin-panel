@@ -1,13 +1,13 @@
-import styles from  "./MarletplaceTableElement.module.css"
+import styles from "./RuleTableElement.module.css";
 
-interface Props {
+interface TableElementProps {
     id: string
     name: string
-    description?: string
+    description: string
     onEdit: () => void
 }
 
-export default function MarletplaceTableElement({ id, name, description, onEdit }: Props) {
+export default function MarletplaceTableElement({ id, name, description, onEdit }: TableElementProps) {
     return (
         <>
             <div className={styles.tableItem}>

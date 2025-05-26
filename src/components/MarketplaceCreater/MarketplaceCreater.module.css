@@ -8,10 +8,29 @@
   z-index: 1000;
 }
 
+.modalBox,
+.modalBox *,
+.modalBox *::before,
+.modalBox *::after {
+  box-sizing: border-box;
+}
+
+.formGroup,
+.buttonGroup {
+  width: 100%;
+}
+
+.input,
+.submit,
+.bindRule {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .modalBox {
   position: relative;
   background-color: #2D2C33;
-  padding: 30px 40px;
+  padding: 24px 32px;
   border-radius: 12px;
   max-width: 480px;
   width: 90%;
@@ -120,4 +139,10 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.ruleList {
+  margin-bottom: 16px;
+  max-height: 200px;
+  overflow-y: auto;
 }

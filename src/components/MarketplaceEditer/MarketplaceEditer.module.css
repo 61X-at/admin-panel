@@ -1,0 +1,181 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalBox,
+.modalBox *,
+.modalBox *::before,
+.modalBox *::after {
+  box-sizing: border-box;
+}
+
+.formGroup,
+.buttonGroup {
+  width: 100%;
+}
+
+.input,
+.submit,
+.bindRule {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modalBox {
+  position: relative;
+  background-color: #2D2C33;
+  padding: 24px 32px;
+  border-radius: 12px;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  border: 2px solid #908E9E;
+  animation: fadeInScale 0.2s ease-out;
+}
+
+.modalTitle {
+  margin: 0 0 20px;
+  font-size: 22px;
+  color: #FFFFFF;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 6px;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #908D9E;
+  border-radius: 6px;
+  font-family: 'Tektur', sans-serif;
+  background-color: #EEECEC;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #5F73B3;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.submit,
+.bindRule {
+  flex: 1;
+  padding: 12px 16px;
+  font-family: 'Tektur', sans-serif;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.submit:hover,
+.bindRule:hover {
+  background-color: #47568c;
+}
+
+.submit:active,
+.bindRule:active {
+  transform: scale(0.98);
+}
+
+.submit {
+  background-color: #5F73B3;
+  color: #FFFFFF;
+}
+
+.bindRule {
+  background-color: #5F73B3;
+  color: #FFFFFF;
+}
+
+.submit:disabled,
+.bindRule:disabled {
+  background-color: #908E9E;
+  color: #CCCCCC;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submit:disabled:hover,
+.bindRule:disabled:hover {
+  background-color: #908E9E;
+  transform: none;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.deleteWrapper {
+  margin-top: 12px;
+  display: flex;
+}
+
+.delete {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #FF5F5F;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.delete:hover {
+  background-color: #E04343;
+}
+
+.delete:active {
+  transform: scale(0.98);
+}

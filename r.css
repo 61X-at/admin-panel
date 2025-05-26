@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: 'Tektur', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.error-box {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #3f4668;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.error-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.icon {
+    background-color: #6b76c5;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-details {
+    background-color: #8e8a9f;
+    height: 100px;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 10px;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.modal-box {
+    background-color: #2D2C33; /* Фон модального окна */
+    padding: 30px 40px;
+    border-radius: 12px;
+    max-width: 480px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    border: 2px solid #908E9E;
+    word-break: break-all;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-title {
+    font-size: 22px;
+    color: #FFFFFF; /* Цвет заголовка */
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #FFFFFF; /* Цвет текста */
+}
+
+input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #908D9E;
+    border-radius: 6px;
+    font-family: 'Tektur', sans-serif;
+    background-color: #EEECEC;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center; 
+    gap: 10px;
+    margin-top: 25px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    font-family: 'Tektur', sans-serif;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.submit {
+    background-color: #5F73B3;
+    color: #FFFFFF;
+}
+
+.close {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+}

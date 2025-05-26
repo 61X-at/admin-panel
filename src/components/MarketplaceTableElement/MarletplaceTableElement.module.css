@@ -1,0 +1,51 @@
+.tableItem {
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+    width: 100%;
+}
+
+.tableItem>div:not(.descriptionCell) {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: #8e8a9f;
+}
+
+.tableItem>button {
+    flex: 0 0 auto;
+    margin-left: auto;
+    align-self: center;
+    background-color: #35426d;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100px;
+}
+
+.tableItem>button:hover {
+    background-color: #2b3758;
+}
+
+.urlDomainCell {
+    flex: 1;
+    background-color: #8e8a9f;
+    padding: 10px;
+    box-sizing: border-box;
+    max-height: 50px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    display: flex;
+    align-items: flex-start;
+
+    white-space: nowrap;
+}
+
+.urlDomainCell span {
+    flex-shrink: 0;
+}
